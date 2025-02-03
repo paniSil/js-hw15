@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Search</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Movie Search</h1>
+
+            <div class="search">
+                <div class="search__group search__group--input">
+                    <label for="search" class="search__label-input"></label>
+                    <input id="search" type="text" class="search__input" placeholder="Film Title">
+                </div>
+
+                <div class="search__group search__group--checkbox">
+                    <input id="checkbox" type="checkbox" class="search__checkbox">
+                    <label for="checkbox" class="search__group-checkbox">Add to exsting list</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movies container" id="movie-list"></div>
+
+    <script src="index.js" type="module"></script>
+    </div>
+</body>
+
+</html>
