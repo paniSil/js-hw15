@@ -3,14 +3,17 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   overflow-y: scroll;
 }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(0, 255, 255, 0.5);
 }
+
 .container {
   width: min(100% - 40px, 1280px);
   margin-inline: auto;
@@ -26,7 +29,15 @@ body {
   padding: 40px;
 }
 
+.header__title {
+  display: flex;
+  align-content: center;
+}
+
 h1 {
+  display: inline-block;
+  padding-top: 7px;
+  padding-left: 10px;
   color: white;
 }
 
@@ -37,22 +48,50 @@ h1 {
   margin-bottom: 50px;
   margin-top: 50px;
 }
+
 .movie {
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 }
+
 .movie__image {
   width: 100%;
+  height: 300px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
+
+.movie__link {
+  display: block;
+  text-align: center;
+  padding: 22px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(188, 188, 203);
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-out;
+}
+
+.movie__link:hover {
+  background-color: rgb(93, 93, 201);
+  scale: 105%;
+}
+
 .search {
   margin-bottom: 30px;
 }
+
 .search__label-input {
   display: block;
   margin-bottom: 7px;
 }
+
 .search__input {
   display: block;
   max-width: 400px;
@@ -67,13 +106,16 @@ h1 {
 .search__input:focus {
   background-color: rgb(163, 255, 240);
 }
+
 .search__label-checkbox {
   font-size: 0.8rem;
   user-select: none;
 }
+
 .search__group--input {
   margin-bottom: 7px;
 }
+
 .search__group--checkbox {
   display: flex;
   gap: 5px;

@@ -2,7 +2,7 @@ const moviesListElement = document.getElementById('movie-list')
 const searchInput = document.getElementById('search')
 const searchCheckbox = document.getElementById('checkbox')
 
-const APIKEY = '56717536';
+const APIKEY = '56717536'; //to be removed
 
 let lastSearchQuery = null;
 let isSearchCheckboxChecked = false;
@@ -19,18 +19,25 @@ const debounce = (() => {
     }
 })()
 
-const addMoviesToList = ({ Poster: poster, Title: title, Year: year }) => {
+const addMoviesToList = ({ Poster: poster, Title: title, Year: year, imdbID: imdb }) => {
     const item = document.createElement('div');
     const img = document.createElement('img');
+    const link = document.createElement('a');
 
     item.classList.add('movie');
 
     img.classList.add('movie__image');
-    img.src = /^(https?:\/\/)/i.test(poster) ? poster : 'src/no-image.svg';
+    img.src = /^(https?:\/\/)/i.test(poster) ? poster : '/src/no-image.png';
     img.alt = `${title} (${year})`;
     img.title = `${title} (${year})`;
 
+    link.classList.add('movie__link');
+    link.textContent += 'View on IMDB';
+    link.href = `https://www.imdb.com/title/${imdb}`;
+    link.target = '_blank';
+
     item.append(img);
+    item.append(link);
     moviesListElement.append(item);
 }
 
