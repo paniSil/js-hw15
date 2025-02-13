@@ -27,7 +27,7 @@ const addMoviesToList = ({ Poster: poster, Title: title, Year: year, imdbID: imd
     item.classList.add('movie');
 
     img.classList.add('movie__image');
-    img.src = /^(https?:\/\/)/i.test(poster) ? poster : 'imgs/no-image.png';
+    img.src = /^(https?:\/\/)/i.test(poster) ? poster : '/img/no-image.png';
     img.alt = `${title} (${year})`;
     img.title = `${title} (${year})`;
 
