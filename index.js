@@ -57,7 +57,7 @@ const getData = (url) =>
             return data.Search;
         })
 
-const SearchInputHandler = (e) => {
+const searchInputHandler = (e) => {
     debounce(() => {
         const searchQuery = e.target.value.trim()
 
@@ -75,5 +75,5 @@ const SearchInputHandler = (e) => {
 
 }
 
-searchInput.addEventListener('input', SearchInputHandler)
+searchInput.addEventListener('input', searchInputHandler)
 searchCheckbox.addEventListener('change', (e) => (isSearchCheckboxChecked = e.target.checked))
