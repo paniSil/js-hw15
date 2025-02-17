@@ -2,7 +2,7 @@ const moviesListElement = document.getElementById('movie-list')
 const searchInput = document.getElementById('search')
 const searchCheckbox = document.getElementById('checkbox')
 
-const APIKEY = '56717536'; //to be removed
+const APIKEY = ''; //to be added here
 
 let lastSearchQuery = null;
 let isSearchCheckboxChecked = false;
